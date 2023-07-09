@@ -1,50 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+
 .App{
-    display: flex;
-    justify-content: center;
+    display: flex;        
     flex-direction: column;
-    align-items: center;
-    padding: 40px 24px;
-    border-top: 5px solid black;
-    background-color: aquamarine;
+    background-color: #ffd100;
+    min-height: 100vh; 
+    width: 100vw;
+    font-family: 'Teko', sans-serif;  
+  
+    
+    
     
 }
+.nav{
+    border-bottom: 3px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 25px;
+    position: fixed;
+    width: 100%;
+    max-width: 100vw;
+    background-color: #ffd100;
+    
+}
+.header{
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.image{
+    width: 100px;
+    height: 100px;
+}
+.app--searchform{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 50px;
+}
 .app--search{
-    padding: 10px;
-    border-radius: 20px;
-    margin-right: 10px;
-    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-family: 'Teko', sans-serif; 
+    font-size: 15px; 
+    letter-spacing: 2px;
+   
 }
 .app--healthlabls{
-    padding: 10px;
-    border-radius: 20px;
-    border: 2px solid black;
-    margin-right: 10px;
-    padding-right: 80px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Teko', sans-serif; 
+    font-size: 15px; 
+    letter-spacing: 2px;
+    
+    
+    
 }
-.app--submit{
-    padding: 10px;
-    border-radius: 20px;
-    border: 2px solid black;
-    margin-right: 10px;
-    padding-right: 40px;
+.app--submit{    
+    border-radius: 10px;    
+    padding: 10px 20px;
     background-color: green;
     color: white;
     cursor: pointer;
+    font-family: 'Teko', sans-serif; 
+    font-size: 15px; 
+    letter-spacing: 2px;
+    font-weight: 600;
+    
 }
 .app--submit:hover{
-    padding: 10px;
-    border-radius: 20px;
-    border: 2px solid black;
-    margin-right: 10px;
-    padding-right: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;    
     background-color: white;
     color: green;
     cursor: pointer;
 }
 .recipetitle {
-    display: grid;
-    grid-template-columns: 220px 220px;
-    margin-top: 36px;
-    align-items: baseline;
-    background-color: aquamarine;
+    display: flex;   
+    margin-top: 200px;   
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+    background-color: transparent;
+    flex-wrap: wrap;    
+    max-width: 100vw;
+    margin-bottom: 100px;
+    padding-left: 25px;
     }
+    @media only screen and (max-width: 600px) {
+        .app--search {
+          width:95%;
+        }
+        .app--healthlabls {
+            width:100%;
+          }
+          .app--submit {
+            width:100%;
+          }
+          .recipetitle {
+            display: grid;
+            grid-template-columns: 450px;
+            margin-top: 20px;
+            align-items: baseline;
+                        
+            }
+      }
+      
