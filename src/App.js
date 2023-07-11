@@ -52,8 +52,9 @@ function App() {
           <input className='app--submit' type='submit' value='Get-recipe' ></input>
         </form>
       </div>
+      
 
-      <div className='recipetitle'>
+      <div className='recipetitle'>        
         {recipe.map((recipe) => {
           return <RecipeTitle recipe={recipe} />
         })}
