@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import RecipeTitle from './recipetitle/RecipeTitle';
@@ -9,16 +9,22 @@ import food from './assets/food.png'
 function App() {
   const YOUR_APP_ID = '0960b891';
   const YOUR_APP_KEY = '64fb3aeb85b88e4f439b961fad558f9d';
-  const [recipe, setrecipe] = useState([]);
+  const [recipe, setrecipe] = useState(['curd']);
   const [healthlabel, setHealthlabel] = useState("vegan");
   const [query, setQuery] = useState("");
   const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&health=${healthlabel}`;
+
+
 
   const getrecipeinfo = async () => {
     var result = await axios.get(url);
     setrecipe(result.data.hits);
     console.log(result.data.hits);
   };
+
+  useEffect(()=>{
+    getrecipeinfo();
+  },[])
 
   const onSubmit = (e) => {
     e.preventDefault();
