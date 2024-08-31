@@ -9,7 +9,7 @@ import food from './assets/food.png'
 function App() {
   const YOUR_APP_ID = '0960b891';
   const YOUR_APP_KEY = '64fb3aeb85b88e4f439b961fad558f9d';
-  const [recipe, setrecipe] = useState(['curd']);
+  const [recipe, setrecipe] = useState([]);
   const [healthlabel, setHealthlabel] = useState("vegan");
   const [query, setQuery] = useState("");
   const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&health=${healthlabel}`;
